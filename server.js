@@ -1,31 +1,35 @@
 const express = require('express');
+const dotenv = require('dotenv');
+const morgan = require('morgan');
+const bodyparser = require("body-parser");
+const path = require('path');
+
+const connectDB = require('./server/database/connection.js');
+
 const app = express();
-const mongoose = require('mongoose')
-const port = process.env.PORT || 3000
-const authorsController = require('./controllers/authors.js');
-const mongoURL = process.env.DB_URL || 'mongodb://localhost:27017/blog';
-const methodOverride = require('method-override')
 
+dotenv.config( { path : '.env'} );
+const PORT = process.env.PORT || 3000
 
+// log requests
+app.use(morgan('tiny'));
 
-mongoose.connect(mongoURL);
-mongoose.connection.once('open',()=> {
-    console.log('connected to mongodb')
-})
+// mongodb connection
+connectDB();
 
+// parse request to body-parser
+app.use(bodyparser.urlencoded({ extended : true}))
 
+// set view engine
+app.set("view engine", "ejs")
+//app.set("views", path.resolve(__dirname, "views/ejs"))
 
-app.use(methodOverride('_method'));
-app.use(express.urlencoded({extended:false}));
-app.use('/authors', authorsController);
+// load assets
+app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
+app.use('/img', express.static(path.resolve(__dirname, "assets/img")))
+app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
+// load routers
+app.use('/', require('./server/routes/router'))
 
-
-app.get('/',(req,res)=>{
-    res.render('index.ejs');
-})
-app.listen(port, () =>{
-    console.log(`listening at PORT ${port}....`)
-});
-
-
+app.listen(PORT, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
