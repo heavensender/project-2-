@@ -12,73 +12,37 @@ email address, gender etc.
 
 ## Technologies Used:
 
--   **Express** is a back end web application framework for Node.js
--   **Express-session** is used to store the user state with each given being assigned a unique session
--   **MongoDB** is an Object Data Modeling (ODM) library for MongoDB and Node.
--   **EJS** is a simple templating language that lets you generate HTML markup with plain JavaScript
--   **Dotenv** is a zero-dependency module that loads environment variables. It allows you to separate secrets from source code
--   **Skeleton** is used for CSS framework for HTML and CSS design templates
+-   **Express** 
+-   **Express-session** 
+-   **MongoDB** 
+-   **EJS** 
+-   **Dotenv** i
+-   **Skeleton** 
 
 ## Database:
 
--   **MongoDB** is a document-oriented NoSQL database that is used to store large amounts of data
+-   **MongoDB** 
+MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License
 
 ## Objective:
 
 -   Make a full CRUD (Create, Read, Update and Delete) using Node.js, MongoDB, Express and EJS that adheres to MVC (Models, Views, and Controllers) file structure
--   Use a CSS framework
 
-## Approach Taken:
+## Steps:
 
--   Do up basic wireframe to visualize app
+-   Design the frame of the app, identify the required functions
 -   Set up basic MVC structure with basic CRUD routes
+-   CSS designs
 -   Set up database in MongoDB
--   Set up authentication page
 -   Test app functions
 -   Link app to Heroku
 
 ## Wireframe:
 
--   Landing Page
-    ![Landing Page](img/wireframe/main.png)
+-   Index.html Page
+    ![Landing Page](img/screenshot.png)
 
--   Login Page
-    ![Login Page](img/wireframe/login.png)
 
--   Dashboard
-    ![Dashboard](img/wireframe/dashboard.png)
-
--   Show Route
-    ![Show Page](img/wireframe/show.png)
-
--   Add New Show
-    ![New Show Form](img/wireframe/new.png)
-
--   Edit Show
-    ![Edit Show Form](img/wireframe/edit.png)
-
-## Screenshots:
-
--   Main App Landing Page
-    ![Landing Page](img/screenshots/landing.png)
-
--   Login Page
-    ![Log In Page](img/screenshots/log-in.png)
-
--   Sign Up Page
-    ![Sign Up Page](img/screenshots/sign-up.png)
-
--   Authenticated User Page
-    ![Authenticated User Page](img/screenshots/authenticated.png)
-
--   User Dashboard
-    ![User Dashboard](img/screenshots/dashboard.png)
-
--   Add New Show Form
-    ![Add New Show](img/screenshots/add-show.png)
-
--   Edit Show Form
-    ![Edit Show](img/screenshots/edit-show.png)
 
 ## RESTful Routes:
 
@@ -104,12 +68,10 @@ email address, gender etc.
 
 ## Challenges:
 
--   Acessing shows as it's nested in User schema
--   Realizing too late that split models will definitely make accessibility easier
+-   To design the whole frame of the project, and make it become real one by one still lack of practice.
 
 ## Further Improvements:
 
--   Split models and use reference instead
--   Social App: Different user interactions (e.g. comment on other users' page, follow other users)
--   Filter shows (e.g. alphabetical order, completed, category etc.)
--   Input option to upload photos instead of using url
+-   More models 
+-   login system
+-   Profile image uploading to recongize the user. 
