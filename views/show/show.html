@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <header id="header">User Management System</header>
+    <main id="main">
+      <a href="/index" class="link">⬅All Users</a>
+      <h1>Edit User</h1>
+      <sub>Use the below form to edit account information</sub>
+      <form action="/update/<%= user.id %>" method="POST">
+        <p>Name</p>
+        <input name="name" value="<%= user.name %>" type="text" />
+        <p>Email</p>
+        <input name="email" value="<%= user.email %>" type="email" />
+        <p>
+          Gender <input type="radio" name="gender" <%= user.gender === 'male' ?
+          'checked' : '' %> value="male" id="male">
+          <label for="male">Male</label>
+          <input type="radio" name="gender" <%= user.gender === 'female' ?
+          'checked' : '' %> value="female" id="female">
+          <label for="female">Female</label>
+        </p>
+        <p>
+          Status <input type="radio" name="status" <%= user.status === 'active'
+          ? 'checked' : '' %> checked value="active" id="active">
+          <label for="active">Active</label>
+          <input type="radio" name="status" <%= user.status === 'inactive' ?
+          'checked' : '' %> value="inactive" id="inactive">
+          <label for="inactive">InActive</label>
+        </p>
+        <button type="submit">Update</button>
+      </form>
+    </main>
+  </body>
+</html>

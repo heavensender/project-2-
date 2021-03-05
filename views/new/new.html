@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <header id="header">User Management System</header>
+    <main id="main">
+      <a href="/index" class="link">⬅All Users</a>
+      <h1>New User</h1>
+      <sub>Use the below form to create a new account</sub>
+      <form action="/create" method="POST" class="form">
+        <p>Name</p>
+        <input name="name" type="text" />
+        <p>Email</p>
+        <input name="email" type="email" />
+        <p>
+          Gender
+          <input type="radio" name="gender" checked value="male" id="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" value="female" id="female" />
+          <label for="female">Female</label>
+        </p>
+        <p>
+          Status
+          <input
+            type="radio"
+            name="status"
+            checked
+            value="active"
+            id="active"
+          />
+          <label for="active">Active</label>
+          <input type="radio" name="status" value="inactive" id="inactive" />
+          <label for="inactive">InActive</label>
+        </p>
+        <button type="submit">Save</button>
+      </form>
+    </main>
+  </body>
+</html>

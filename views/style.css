@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#header {
+  width: 100vw;
+  height: 10vh;
+  background-color: rgb(0, 139, 93);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+}
+
+table {
+  width: 70vw;
+}
+tr {
+  height: 5vh;
+}
+td {
+  text-align: center;
+}
+#main {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-link {
+  margin: 10px 0;
+}
+.link {
+  align-self: flex-start;
+}
+
+p {
+  width: 30vw;
+  color: gray;
+  font-size: 1.2vw;
+}
+input[type=text], input[type=email] {
+  margin-bottom: 10px;
+  outline: none;
+  width: 100%;
+  height: 3vh;
+}
+label {
+  color: black;
+}
+
+button[type=submit] {
+  margin-top: 4vh;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 5vh;
+  background-color: rgb(0, 139, 81);
+  color: black;
+  font-size: 1.2vw;  
+}
+
+sub {
+  font-size: 1vw;
+  color: gray;
+  margin-bottom: 4vh;
+}
