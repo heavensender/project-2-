@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
 const ejs = require("ejs");
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 
 
@@ -19,6 +19,6 @@ routes.forEach((route) => {
   app[route.method](route.path, route.controller);
 });
 
-app.listen(3000, function () {
-  console.log("open http://localhost:3000/");
-});
+
+app.listen(PORT, () => 
+console.log('Listening on port', PORT));
